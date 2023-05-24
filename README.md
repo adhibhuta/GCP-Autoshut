@@ -59,7 +59,7 @@ if [ $ttl -lt 0 ]; then
 fi
 ```
 2. run `crontab -e`
-3. update the file with: `*/5 * * * *  bash /home/debjyoti_biswas_redis_com/autoshut.sh`
+3. update the file with: `*/5 * * * *  bash /path/to/autoshut.sh`
 4. reboot: `sudo reboot`
 
 ## To extend the time
