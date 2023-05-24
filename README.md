@@ -33,7 +33,8 @@ sudo systemctl restart redis.service
 # Default time being 15 mins
 redis-cli set shut test EX 900
 ```
-4. close and run this command `sudo update-rc.d autoset.sh defaults`
+4. Make it executable: `sudo chmod +x /etc/init.d/autoset.sh`
+5. close and run this command `sudo update-rc.d autoset.sh defaults`
 
 ## Add to .bashrc to take input from user
 1. run: `vi ~/.bashrc`
@@ -76,3 +77,4 @@ The system is going down for poweroff at Thu 2023-05-18 05:06:02 UTC!
 sudo shutdown -c
 redis-cli set shut test EX 3600
 ```
+4. Make it executable: `sudo chmod +x ~/timeextend.sh`
