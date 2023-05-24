@@ -1,8 +1,8 @@
-# GCP Management Scripts for auto-shutoff of VMs when not in use
+# VM Management Scripts for auto-shutoff of VMs when not in use
 
 This script uses **Redis** to set a default time of 15 mins, after the 15 mins are over the machine will be shutdown automatically. 
 
-To increase the time, the user has to ssh into the VM which will prompt for a duration for the demo. Once the demo is over the user can manually shut it down or wait for the set duration for the script to shut it down.
+To increase the time, the user has to ssh into the VM which will prompt for a duration for the technical session. Once the technical session is over the user can manually shut it down or wait for the set duration for the script to shut it down.
 
 ## Add to GCP Startup Script
 Advanced Options > Management > Automation Script
@@ -38,7 +38,7 @@ redis-cli set shut test EX 900
 ## Add to .bashrc to take input from user
 1. run: `vi ~/.bashrc`
 ```
-echo "Hi There; please provide how long you want to have this demo running in mins:"
+echo "Hi There; please provide how long you want to have this technical session running in mins:"
 
 read ttl
 
@@ -62,7 +62,7 @@ fi
 3. update the file with: `*/5 * * * *  bash /home/debjyoti_biswas_redis_com/autoshut.sh`
 4. reboot: `sudo reboot`
 
-## Once the time is over and the user requires more time for the demo
+## Once the time is over and the user requires more time for the technical session
 1. You will get a prompt like the following:
 ```
 Broadcast message from root@dj-test-1 (Thu 2023-05-18 05:05:02 UTC):
