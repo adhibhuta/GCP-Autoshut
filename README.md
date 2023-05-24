@@ -62,13 +62,17 @@ fi
 3. update the file with: `*/5 * * * *  bash /home/debjyoti_biswas_redis_com/autoshut.sh`
 4. reboot: `sudo reboot`
 
-## Once the time is over and the user requires more time for the technical session
-1. You will get a prompt like the following:
+## To extend the time
+1. If the time is over user will see the following message:
 ```
 Broadcast message from root@dj-test-1 (Thu 2023-05-18 05:05:02 UTC):
 
 The system is going down for poweroff at Thu 2023-05-18 05:06:02 UTC!
 ```
-2. To cancel the scheduled power-off: `sudo shutdown -c` 
-3. To increase the time by an hour more: `redis-cli set shut test EX 3600`
- 
+2. run `vi ~/timeextend.sh`
+3. Add the following:
+
+```
+sudo shutdown -c
+redis-cli set shut test EX 3600
+```
