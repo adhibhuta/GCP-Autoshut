@@ -7,6 +7,8 @@ To increase the time, the user has to ssh into the VM which will prompt for a du
 ## Add to GCP Startup Script
 Advanced Options > Management > Automation Script
 
+or if you already have an environment running run the following command
+
 ```
 sudo apt update
 sudo apt install redis-server -y
