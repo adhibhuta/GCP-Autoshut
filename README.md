@@ -11,6 +11,7 @@ Advanced Options > Management > Automation Script
 sudo apt update
 sudo apt install redis-server -y
 sudo sed -i 's/supervised no/supervised systemd/g' /etc/redis/redis.conf
+sudo sed -i 's/port 6379/port 9000/g' /etc/redis/redis.conf
 sudo systemctl restart redis.service
 ```
 
